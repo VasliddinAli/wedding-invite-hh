@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikoh To'yi - Premium Taklifnoma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&family=Cinzel:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gold-gradient: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            --rose-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            --aurora: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #ffd89b 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--aurora);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Magic particles */
+        .magic-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #fff 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float-particle 8s linear infinite;
+        }
+
+        .particle:nth-child(odd) {
+            background: radial-gradient(circle, #ffd700 0%, transparent 70%);
+        }
+
+        .particle:nth-child(3n) {
+            background: radial-gradient(circle, #ff69b4 0%, transparent 70%);
+            width: 6px;
+            height: 6px;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Floating hearts with 3D effect */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 182, 193, 0.8);
+            animation: float-heart 12s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 182, 193, 0.5));
+            transform-style: preserve-3d;
+        }
+
+        .heart:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+            font-size: 1.2em;
+        }
+
+        .heart:nth-child(2) {
+            left: 15%;
+            animation-delay: 2s;
+            font-size: 0.8em;
+        }
+
+        .heart:nth-child(3) {
+            left: 25%;
+            animation-delay: 4s;
+            font-size: 1.5em;
+        }
+
+        .heart:nth-child(4) {
+            left: 75%;
+            animation-delay: 1s;
+            font-size: 1em;
+        }
+
+        .heart:nth-child(5) {
+            left: 85%;
+            animation-delay: 3s;
+            font-size: 1.3em;
+        }
+
+        .heart:nth-child(6) {
+            left: 95%;
+            animation-delay: 5s;
+            font-size: 0.9em;
+        }
+
+        @keyframes float-heart {
+
+            0%,
+            100% {
+                transform: translateY(100vh) rotateY(0deg) rotateX(0deg);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            25% {
+                transform: translateY(75vh) rotateY(180deg) rotateX(180deg);
+            }
+
+            50% {
+                transform: translateY(50vh) rotateY(360deg) rotateX(360deg);
+            }
+
+            75% {
+                transform: translateY(25vh) rotateY(540deg) rotateX(180deg);
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .invitation-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(30px);
+            border-radius: 40px;
+            padding: 80px 60px;
+            text-align: center;
+            box-shadow:
+                0 50px 100px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+            margin-top: 3vh;
+            transform-style: preserve-3d;
+        }
+
+        .invitation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 40% 40%, rgba(255, 215, 155, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            animation: aurora-dance 8s ease-in-out infinite;
+        }
+
+        @keyframes aurora-dance {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) rotateX(20deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotateX(0deg);
+            }
+        }
+
+        .invitation-header {
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .bismillah {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            color: #8B4513;
+            margin-bottom: 40px;
+            font-style: italic;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 0.5s forwards;
+            text-shadow: 0 2px 4px rgba(139, 69, 19, 0.2);
+            position: relative;
+        }
+
+        .bismillah::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8B4513, transparent);
+        }
+
+        .main-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5.5em;
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 30px 0;
+            text-shadow: 0 8px 16px rgba(212, 87, 154, 0.3);
+            opacity: 0;
+            animation: fadeInScale 1.5s cubic-bezier(0.23, 1, 0.32, 1) 1s forwards;
+            position: relative;
+            filter: drop-shadow(0 0 20px rgba(212, 87, 154, 0.4));
+        }
+
+        .main-title::before {
+            content: '✨';
+            position: absolute;
+            top: -20px;
+            left: -30px;
+            font-size: 0.3em;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        .main-title::after {
+            content: '✨';
+            position: absolute;
+            top: -10px;
+            right: -40px;
+            font-size: 0.4em;
+            animation: twinkle 2s ease-in-out infinite 1s;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(0.8) rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2) rotate(180deg);
+            }
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #6b705c;
+            margin-bottom: 50px;
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 1.8s forwards;
+            position: relative;
+        }
+
+        .names-section {
+            margin: 80px 0;
+            position: relative;
+        }
+
+        .bride-groom {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            perspective: 1000px;
+        }
+
+        .name-card {
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 50px 40px;
+            border-radius: 30px;
+            margin: 30px;
+            box-shadow:
+                0 30px 60px rgba(240, 147, 251, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            transform: scale(0) rotateY(180deg);
+            animation: cardFlip 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 2.2s forwards;
+            min-width: 320px;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .name-card:nth-child(2) {
+            animation-delay: 2.6s;
+        }
+
+        .name-card:hover {
+            transform: scale(1.05) rotateY(5deg) rotateX(5deg);
+            box-shadow:
+                0 40px 80px rgba(240, 147, 251, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        .name-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .name-card h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .name-card p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .heart-divider {
+            font-size: 4em;
+            background: var(--rose-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 30px 0;
+            animation: heartBeat 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(255, 107, 157, 0.6));
+            position: relative;
+        }
+
+        .heart-divider::before {
+            content: '💖';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8em;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1) rotate(-5deg);
+            }
+
+            75% {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+
+        @keyframes cardFlip {
+            0% {
+                transform: scale(0) rotateY(180deg);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.1) rotateY(90deg);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1) rotateY(0deg);
+                opacity: 1;
+            }
+        }
+
+        .event-details {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 60px 50px;
+            border-radius: 30px;
+            margin: 60px 0;
+            opacity: 0;
+            animation: slideInLeft 1.2s cubic-bezier(0.23, 1, 0.32, 1) 3.2s forwards;
+            box-shadow:
+                0 30px 60px rgba(102, 126, 234, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-details::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate360 20s linear infinite;
+        }
+
+        @keyframes rotate360 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            font-size: 1.3em;
+            position: relative;
+            z-index: 1;
+            padding: 15px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .detail-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+        }
+
+        .detail-item i {
+            font-size: 2em;
+            margin-right: 25px;
+            color: #ffd89b;
+            filter: drop-shadow(0 0 10px rgba(255, 216, 155, 0.5));
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-80px) rotateY(-20deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0) rotateY(0deg);
+            }
+        }
+
+        .closing {
+            margin-top: 80px;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 3.8s forwards;
+            position: relative;
+        }
+
+        .closing h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2em;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 4px 8px rgba(255, 215, 155, 0.3));
+        }
+
+        .closing p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 2;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(50px);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05) translateY(-10px);
+            }
+
+            70% {
+                transform: scale(0.9) translateY(0px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0px);
+            }
+        }
+
+        .decorative-corners {
+            position: absolute;
+            font-size: 4em;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.4;
+            animation: cornerGlow 3s ease-in-out infinite alternate;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 155, 0.3));
+        }
+
+        .corner-tl {
+            top: 30px;
+            left: 30px;
+            animation-delay: 0s;
+        }
+
+        .corner-tr {
+            top: 30px;
+            right: 30px;
+            animation-delay: 0.5s;
+        }
+
+        .corner-bl {
+            bottom: 30px;
+            left: 30px;
+            animation-delay: 1s;
+        }
+
+        .corner-br {
+            bottom: 30px;
+            right: 30px;
+            animation-delay: 1.5s;
+        }
+
+        /* Countdown Timer Styles */
+        .countdown-section {
+            margin: 80px 0;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: slideInUp 1.2s ease-out 2.8s forwards;
+        }
+
+        .countdown-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate360 25s linear infinite;
+        }
+
+        .countdown-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            min-width: 120px;
+            transition: all 0.3s ease;
+            transform: translateY(0);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .countdown-item:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .countdown-item:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .countdown-item:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .countdown-item:nth-child(7) {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .countdown-item:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .countdown-number {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #ffd89b;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .countdown-label {
+            font-size: 1.1em;
+            color: white;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .countdown-divider {
+            font-size: 3em;
+            color: #ffd89b;
+            font-weight: bold;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes celebration {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            25% {
+                transform: scale(1.1) rotate(-5deg);
+            }
+
+            75% {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+
+        @keyframes fallDown {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Calendar Styles */
+        .calendar-section {
+            margin: 60px 0;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 3.5s forwards;
+        }
+
+        .calendar-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            text-align: center;
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 4px 8px rgba(212, 87, 154, 0.3));
+        }
+
+        .calendar-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            margin: 40px auto;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+        }
+
+        .calendar-header {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .calendar-day-header {
+            text-align: center;
+            font-weight: 600;
+            color: #667eea;
+            padding: 15px 5px;
+            font-size: 1.1em;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .calendar-day:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: scale(1.1);
+        }
+
+        .calendar-day.other-month {
+            color: #ccc;
+        }
+
+        .calendar-day.wedding-day {
+            background: var(--secondary-gradient);
+            color: white;
+            font-weight: 700;
+            font-size: 1.4em;
+            box-shadow: 0 15px 30px rgba(240, 147, 251, 0.4);
+            animation: weddingDayPulse 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        .calendar-day.wedding-day::before {
+            content: '💖';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 0.7em;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+
+        @keyframes weddingDayPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 15px 30px rgba(240, 147, 251, 0.4);
+            }
+
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 20px 40px rgba(240, 147, 251, 0.6);
+            }
+        }
+
+        /* Wedding Gallery Styles */
+        .wedding-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 4s forwards;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            transform: translateY(0);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay span {
+            font-size: 1.2em;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes cornerGlow {
+            0% {
+                opacity: 0.2;
+                transform: scale(0.8) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0.6;
+                transform: scale(1.1) rotate(10deg);
+            }
+        }
+
+        /* 3D Sparkles */
+        .sparkle-3d {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle, #ffd700, #ff69b4);
+            border-radius: 50%;
+            animation: sparkle3d 4s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes sparkle3d {
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            25% {
+                opacity: 1;
+                transform: scale(1) rotateX(90deg) rotateY(90deg) rotateZ(90deg);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.2) rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+            }
+
+            75% {
+                opacity: 1;
+                transform: scale(1) rotateX(270deg) rotateY(270deg) rotateZ(270deg);
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .subtitle {
+                margin-bottom: 20px;
+            }
+
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 10px;
+                position: relative;
+                z-index: 10;
+            }
+
+            .invitation-card {
+                padding: 40px 20px;
+                margin: 15px 10px;
+                border-radius: 25px;
+            }
+
+            .main-title {
+                font-size: 3.5em;
+            }
+
+            .bride-groom {
+                flex-direction: column;
+            }
+
+            .name-card {
+                margin: 15px 8px;
+                min-width: auto;
+                width: 100%;
+                padding: 30px 20px;
+            }
+
+            .detail-item {
+                font-size: 1em;
+                margin: 20px 0;
+                padding: 12px;
+            }
+
+            .countdown-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .countdown-item {
+                min-width: 100px;
+                width: 100%;
+                padding: 15px 12px;
+            }
+
+            .countdown-number {
+                font-size: 2.2em;
+            }
+
+            .countdown-divider {
+                font-size: 1.8em;
+                transform: rotate(90deg);
+            }
+
+            .calendar-container {
+                padding: 15px;
+                margin: 15px 8px;
+            }
+
+            .calendar-day {
+                font-size: 0.9em;
+            }
+
+            .calendar-day.wedding-day {
+                font-size: 1.1em;
+            }
+
+            .wedding-gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .gallery-overlay {
+                transform: translateY(0);
+                background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.8));
+            }
+
+            .decorative-corners {
+                font-size: 2.5em;
+            }
+
+            .event-details {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .subtitle {
+                margin-bottom: 20px;
+            }
+
+            .main-title {
+                font-size: 2.8em;
+            }
+
+            .invitation-card {
+                padding: 30px 15px;
+            }
+
+            .name-card h3 {
+                font-size: 2.2em;
+            }
+
+            .closing h3 {
+                font-size: 2.2em;
+            }
+
+            .name-card {
+                padding: 25px 15px;
+                margin: 10px 5px;
+            }
+
+            .countdown-item {
+                min-width: 70px;
+                padding: 12px 10px;
+            }
+
+            .countdown-number {
+                font-size: 1.8em;
+            }
+
+            .event-details {
+                padding: 25px 15px;
+            }
+
+            .detail-item {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="magic-container" id="magicContainer"></div>
+
+    <div class="floating-hearts">
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+    </div>
+
+    <div class="container">
+        <div class="invitation-card">
+            <div class="decorative-corners corner-tl"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-corners corner-tr"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-corners corner-bl"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-corners corner-br"><i class="fas fa-leaf"></i></div>
+
+            <div class="sparkle-3d" style="top: 15%; left: 25%;"></div>
+            <div class="sparkle-3d" style="top: 25%; right: 20%; animation-delay: 1s;"></div>
+            <div class="sparkle-3d" style="bottom: 30%; left: 15%; animation-delay: 2s;"></div>
+            <div class="sparkle-3d" style="bottom: 20%; right: 25%; animation-delay: 3s;"></div>
+            <div class="sparkle-3d" style="top: 50%; left: 10%; animation-delay: 0.5s;"></div>
+            <div class="sparkle-3d" style="top: 60%; right: 10%; animation-delay: 1.5s;"></div>
+
+            <div class="invitation-header">
+                <div class="bismillah">
+                    "Bismillahir Rahmanir Raheem"
+                </div>
+                <h1 class="main-title">Nikoh To'yi</h1>
+                <p class="subtitle">Sizni eng baxtli kununga taklif qilamiz</p>
+            </div>
+
+            <div class="names-section">
+                <div class="bride-groom">
+                    <div class="name-card">
+                        <h3><i class="fas fa-ring"></i> Kelin</h3>
+                        <p>Hilolaxon Alijonova</p>
+                    </div>
+                    <div class="heart-divider">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="name-card">
+                        <h3><i class="fas fa-ring"></i> Kuyov</h3>
+                        <p>Husanboy Alijonov</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-section">
+                <h2 class="countdown-title">To'y kunigacha qoldi</h2>
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Kun</div>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Soat</div>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Daqiqa</div>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Soniya</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Section -->
+            <div class="calendar-section">
+                <h2 class="calendar-title">Oktyabr 2025</h2>
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <div class="calendar-day-header">Du</div>
+                        <div class="calendar-day-header">Se</div>
+                        <div class="calendar-day-header">Ch</div>
+                        <div class="calendar-day-header">Pa</div>
+                        <div class="calendar-day-header">Ju</div>
+                        <div class="calendar-day-header">Sh</div>
+                        <div class="calendar-day-header">Ya</div>
+                    </div>
+                    <div class="calendar-days" id="calendar-days"></div>
+                </div>
+
+            </div>
+
+            <div class="event-details">
+                <div class="detail-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <strong>Sana:</strong> 12 Oktyabr, 2025
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Vaqt:</strong> 06:00
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Manzil:</strong> Farg'ona vil. Quva tum. Qorashox MFY, Shodlik to'yxonasi
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Aloqa:</strong> +9989 4444 60 50
+                    </div>
+                </div>
+            </div>
+
+            <div class="closing">
+                <h3>Hurmat bilan</h3>
+                <p>
+                    Sizning ishtirokingiz bizning baxtimizni yanada to'liqroq qiladi.
+                    Oila va yaqinlarimiz bilan birga bu muhim kunni nishonlashga taklif qilamiz.
+                    Sizning mavjudligingiz bizning uchun eng katta sharaf va quvonchdir!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Wedding date: October 12, 2025 at 6:00 AM
+        const weddingDate = new Date('2025-10-12T06:00:00').getTime();
+
+        // Countdown Timer Function
+        function updateCountdown() {
+            try {
+                const now = new Date().getTime();
+                const distance = weddingDate - now;
+
+                // Get countdown elements
+                const daysElement = document.getElementById('days');
+                const hoursElement = document.getElementById('hours');
+                const minutesElement = document.getElementById('minutes');
+                const secondsElement = document.getElementById('seconds');
+                const countdownTitle = document.querySelector('.countdown-title');
+
+                // Check if elements exist
+                if (!daysElement || !hoursElement || !minutesElement || !secondsElement) {
+                    return;
+                }
+
+                if (distance > 0) {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Update countdown display
+                    daysElement.textContent = days.toString().padStart(2, '0');
+                    hoursElement.textContent = hours.toString().padStart(2, '0');
+                    minutesElement.textContent = minutes.toString().padStart(2, '0');
+                    secondsElement.textContent = seconds.toString().padStart(2, '0');
+
+                    // Add special effects when countdown changes
+                    if (seconds === 0) {
+                        createCountdownSparkle();
+                    }
+
+                    // Add pulse effect for last 10 seconds of each minute
+                    if (seconds <= 10) {
+                        const countdownItems = document.querySelectorAll('.countdown-item');
+                        countdownItems.forEach(item => {
+                            item.style.animation = 'pulse 0.5s ease-in-out';
+                        });
+                        setTimeout(() => {
+                            countdownItems.forEach(item => {
+                                item.style.animation = '';
+                            });
+                        }, 500);
+                    }
+                } else {
+                    // Wedding day has arrived!
+                    if (countdownTitle) {
+                        countdownTitle.textContent = "To'y kuni keldi! 🎉";
+                        countdownTitle.style.animation = 'celebration 2s ease-in-out infinite';
+                    }
+                    daysElement.textContent = '00';
+                    hoursElement.textContent = '00';
+                    minutesElement.textContent = '00';
+                    secondsElement.textContent = '00';
+
+                    // Create celebration effect
+                    createCelebrationEffect();
+                }
+            } catch (error) {
+            }
+        }
+
+        // Celebration effect for wedding day
+        function createCelebrationEffect() {
+            // Create confetti effect
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.innerHTML = ['🎉', '🎊', '💖', '✨', '🎈'][Math.floor(Math.random() * 3)];
+                    confetti.style.position = 'fixed';
+                    confetti.style.left = Math.random() * window.innerWidth + 'px';
+                    confetti.style.top = '-50px';
+                    confetti.style.fontSize = '2em';
+                    confetti.style.zIndex = '10000';
+                    confetti.style.pointerEvents = 'none';
+                    confetti.style.animation = 'fallDown 3s linear forwards';
+
+                    document.body.appendChild(confetti);
+
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 3000);
+                }, i * 100);
+            }
+        }
+
+        function createCountdownSparkle() {
+            const countdownItems = document.querySelectorAll('.countdown-item');
+            countdownItems.forEach((item, index) => {
+                setTimeout(() => {
+                    const rect = item.getBoundingClientRect();
+                    for (let i = 0; i < 5; i++) {
+                        createInteractiveSparkle(
+                            rect.left + rect.width / 2,
+                            rect.top + rect.height / 2
+                        );
+                    }
+                }, index * 100);
+            });
+        }
+
+        // Calendar Generation Function
+        function generateCalendar() {
+            const calendarDays = document.getElementById('calendar-days');
+            if (!calendarDays) return;
+
+            const year = 2025;
+            const month = 9; // October (0-indexed: Jan=0, Feb=1, ..., Oct=9)
+
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+
+            // Get first Monday of the calendar view
+            const startDate = new Date(firstDay);
+            const dayOfWeek = firstDay.getDay();
+            const mondayOffset = dayOfWeek === 0 ? -6 : 1 - dayOfWeek; // Adjust for Monday start
+            startDate.setDate(firstDay.getDate() + mondayOffset);
+
+            const totalDays = 42; // 6 weeks
+
+            // Clear existing calendar
+            calendarDays.innerHTML = '';
+
+            for (let i = 0; i < totalDays; i++) {
+                const currentDate = new Date(startDate);
+                currentDate.setDate(startDate.getDate() + i);
+
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.textContent = currentDate.getDate();
+
+                // Style days from other months
+                if (currentDate.getMonth() !== month) {
+                    dayElement.classList.add('other-month');
+                }
+
+                // Highlight wedding day (October 12)
+                if (currentDate.getMonth() === month && currentDate.getDate() === 12) {
+                    dayElement.classList.add('wedding-day');
+                    dayElement.style.position = 'relative';
+
+                    // Add special click effect for wedding day
+                    dayElement.addEventListener('click', function () {
+                        // Create heart explosion
+                        for (let j = 0; j < 20; j++) {
+                            setTimeout(() => {
+                                const rect = this.getBoundingClientRect();
+                                const heart = document.createElement('div');
+                                heart.innerHTML = '💖';
+                                heart.style.position = 'fixed';
+                                heart.style.left = (rect.left + rect.width / 2) + 'px';
+                                heart.style.top = (rect.top + rect.height / 2) + 'px';
+                                heart.style.fontSize = '1.5em';
+                                heart.style.zIndex = '10000';
+                                heart.style.pointerEvents = 'none';
+
+                                // Random direction for heart explosion
+                                const angle = (j / 20) * 2 * Math.PI;
+                                const distance = 50 + Math.random() * 100;
+                                const finalX = (rect.left + rect.width / 2) + Math.cos(angle) * distance;
+                                const finalY = (rect.top + rect.height / 2) + Math.sin(angle) * distance;
+
+                                heart.style.animation = `heartExplode 2s ease-out forwards`;
+
+                                // Custom animation for this heart
+                                const heartAnimation = heart.animate([
+                                    {
+                                        transform: 'scale(1) translate(0, 0) rotate(0deg)',
+                                        opacity: 1
+                                    },
+                                    {
+                                        transform: `scale(1.5) translate(${finalX - (rect.left + rect.width / 2)}px, ${finalY - (rect.top + rect.height / 2)}px) rotate(360deg)`,
+                                        opacity: 0
+                                    }
+                                ], {
+                                    duration: 2000,
+                                    easing: 'ease-out'
+                                });
+
+                                document.body.appendChild(heart);
+
+                                heartAnimation.onfinish = () => {
+                                    heart.remove();
+                                };
+                            }, j * 50);
+                        }
+                    });
+                }
+
+                // Add hover effect with date info
+                dayElement.addEventListener('mouseenter', function () {
+                    if (!this.classList.contains('other-month')) {
+                        this.style.background = 'rgba(102, 126, 234, 0.2)';
+                        this.style.color = '#667eea';
+                        this.style.transform = 'scale(1.1)';
+                    }
+                });
+
+                dayElement.addEventListener('mouseleave', function () {
+                    if (!this.classList.contains('wedding-day') && !this.classList.contains('other-month')) {
+                        this.style.background = '';
+                        this.style.color = '';
+                        this.style.transform = 'scale(1)';
+                    }
+                });
+
+                calendarDays.appendChild(dayElement);
+            }
+
+        }
+
+        // Heart explosion animation
+        const heartExplodeStyle = document.createElement('style');
+        heartExplodeStyle.textContent = `
+            @keyframes heartExplode {
+                0% {
+                    opacity: 1;
+                    transform: scale(1) translateY(0) rotate(0deg);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1.5) translateY(-100px) rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(heartExplodeStyle);
+
+        // Gallery image lazy loading and effects
+        function initializeGallery() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            galleryItems.forEach((item, index) => {
+                const img = item.querySelector('.gallery-image');
+
+                // Add loading effect
+                img.style.filter = 'blur(5px)';
+                img.addEventListener('load', function () {
+                    this.style.filter = 'blur(0px)';
+                    this.style.transition = 'filter 0.5s ease';
+                });
+
+                // Add click effect
+                item.addEventListener('click', function () {
+                    this.style.transform = 'scale(1.05)';
+
+                    // Create image sparkles
+                    const rect = this.getBoundingClientRect();
+                    for (let i = 0; i < 10; i++) {
+                        setTimeout(() => {
+                            createInteractiveSparkle(
+                                rect.left + Math.random() * rect.width,
+                                rect.top + Math.random() * rect.height
+                            );
+                        }, i * 100);
+                    }
+
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 300);
+                });
+
+                // Stagger animation
+                item.style.animationDelay = (4 + index * 0.2) + 's';
+            });
+        }
+
+        // Enhanced countdown item interactions
+        function initializeCountdownInteractions() {
+            const countdownItems = document.querySelectorAll('.countdown-item');
+
+            countdownItems.forEach((item, index) => {
+                item.addEventListener('mouseenter', function () {
+                    this.style.background = 'rgba(255, 255, 255, 0.25)';
+                    this.style.transform = 'scale(1.1) translateY(-5px)';
+
+                    // Create mini celebration
+                    const rect = this.getBoundingClientRect();
+                    for (let i = 0; i < 3; i++) {
+                        setTimeout(() => {
+                            createInteractiveSparkle(
+                                rect.left + rect.width / 2,
+                                rect.top + rect.height / 2
+                            );
+                        }, i * 100);
+                    }
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    this.style.background = 'rgba(255, 255, 255, 0.15)';
+                    this.style.transform = '';
+                });
+            });
+        }
+
+        // Magic particles generator
+        function createMagicParticles() {
+            const container = document.getElementById('magicContainer');
+
+            setInterval(() => {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 8 + 4) + 's';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+
+                container.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 10000);
+            }, 300);
+        }
+
+        // Interactive sparkles on mouse move
+        document.addEventListener('mousemove', function (e) {
+            if (Math.random() > 0.85) {
+                createInteractiveSparkle(e.pageX, e.pageY);
+            }
+        });
+
+        function createInteractiveSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.width = '10px';
+            sparkle.style.height = '10px';
+            sparkle.style.background = `radial-gradient(circle, ${Math.random() > 0.5 ? '#ffd700' : '#ff69b4'}, transparent)`;
+            sparkle.style.borderRadius = '50%';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '10000';
+            sparkle.style.animation = 'sparkleFade 1s ease-out forwards';
+
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        }
+
+        // Add sparkle fade animation
+        const sparkleFadeStyle = document.createElement('style');
+        sparkleFadeStyle.textContent = `
+            @keyframes sparkleFade {
+                0% {
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(2) rotate(180deg);
+                }
+            }
+        `;
+        document.head.appendChild(sparkleFadeStyle);
+
+        // Add bounce animation for decorative elements
+        function addBounceAnimation() {
+            const decorativeElements = document.querySelectorAll('.decorative-corners');
+            decorativeElements.forEach((element, index) => {
+                element.addEventListener('mouseenter', function () {
+                    this.style.animation = 'bounce 0.6s ease-in-out';
+                });
+
+                element.addEventListener('animationend', function () {
+                    this.style.animation = '';
+                });
+            });
+        }
+
+        // Add bounce keyframes
+        const bounceStyle = document.createElement('style');
+        bounceStyle.textContent = `
+            @keyframes bounce {
+                0%, 20%, 53%, 80%, 100% {
+                    transform: translate3d(0,0,0);
+                }
+                40%, 43% {
+                    transform: translate3d(0, -30px, 0);
+                }
+                70% {
+                    transform: translate3d(0, -15px, 0);
+                }
+                90% {
+                    transform: translate3d(0, -4px, 0);
+                }
+            }
+        `;
+        document.head.appendChild(bounceStyle);
+
+        // Enhanced calendar navigation
+        function addCalendarNavigation() {
+            const calendarTitle = document.querySelector('.calendar-title');
+            if (calendarTitle) {
+                calendarTitle.addEventListener('click', function () {
+                    // Add click effect
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+
+                    // Create title sparkles
+                    const rect = this.getBoundingClientRect();
+                    for (let i = 0; i < 8; i++) {
+                        setTimeout(() => {
+                            createInteractiveSparkle(
+                                rect.left + Math.random() * rect.width,
+                                rect.top + Math.random() * rect.height
+                            );
+                        }, i * 100);
+                    }
+                });
+            }
+        }
+
+        // Add sound effects (optional)
+        function addSoundEffects() {
+            // Create audio context for potential sound effects
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+                // Add click sound for interactive elements
+                document.addEventListener('click', function (e) {
+                    if (e.target.classList.contains('calendar-day') ||
+                        e.target.classList.contains('rsvp-button') ||
+                        e.target.classList.contains('gallery-item')) {
+
+                        // Create a simple beep sound
+                        const oscillator = audioContext.createOscillator();
+                        const gainNode = audioContext.createGain();
+
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
+
+                        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                        oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+
+                        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+
+                        oscillator.start(audioContext.currentTime);
+                        oscillator.stop(audioContext.currentTime + 0.1);
+                    }
+                });
+            } catch (error) {
+            }
+        }
+
+        // Add parallax effect to floating hearts
+        function addParallaxEffect() {
+            document.addEventListener('mousemove', function (e) {
+                const hearts = document.querySelectorAll('.heart');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+
+                hearts.forEach((heart, index) => {
+                    const speed = (index + 1) * 0.5;
+                    const x = (mouseX - 0.5) * speed * 20;
+                    const y = (mouseY - 0.5) * speed * 20;
+
+                    heart.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+        }
+
+        // Add scroll-triggered animations
+        function addScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            const animatedElements = document.querySelectorAll('.invitation-card, .name-card, .event-details, .countdown-section, .calendar-section');
+            animatedElements.forEach(el => observer.observe(el));
+        }
+
+        // Add keyboard navigation
+        function addKeyboardNavigation() {
+            document.addEventListener('keydown', function (e) {
+                switch (e.key) {
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        window.scrollBy(0, -100);
+                        break;
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        window.scrollBy(0, 100);
+                        break;
+                    case 'Home':
+                        e.preventDefault();
+                        window.scrollTo(0, 0);
+                        break;
+                    case 'End':
+                        e.preventDefault();
+                        window.scrollTo(0, document.body.scrollHeight);
+                        break;
+                }
+            });
+        }
+
+        // Add touch gestures for mobile
+        function addTouchGestures() {
+            let startY = 0;
+            let startX = 0;
+
+            document.addEventListener('touchstart', function (e) {
+                startY = e.touches[0].clientY;
+                startX = e.touches[0].clientX;
+            });
+
+            document.addEventListener('touchend', function (e) {
+                const endY = e.changedTouches[0].clientY;
+                const endX = e.changedTouches[0].clientX;
+                const diffY = startY - endY;
+                const diffX = startX - endX;
+
+                // Swipe up gesture
+                if (diffY > 50 && Math.abs(diffX) < 50) {
+                    createInteractiveSparkle(endX, endY);
+                }
+            });
+        }
+
+        // Performance optimization
+        function optimizePerformance() {
+            // Throttle mousemove events
+            let ticking = false;
+
+            function updateSparkles(e) {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        if (Math.random() > 0.9) {
+                            createInteractiveSparkle(e.pageX, e.pageY);
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            document.removeEventListener('mousemove', function (e) {
+                if (Math.random() > 0.85) {
+                    createInteractiveSparkle(e.pageX, e.pageY);
+                }
+            });
+
+            document.addEventListener('mousemove', updateSparkles);
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Debug countdown elements
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            // Initialize all functions
+            generateCalendar();
+            initializeGallery();
+            initializeCountdownInteractions();
+            createMagicParticles();
+            addBounceAnimation();
+            addCalendarNavigation();
+            addParallaxEffect();
+            addScrollAnimations();
+            addKeyboardNavigation();
+            addTouchGestures();
+            optimizePerformance();
+
+            // Start countdown timer with immediate update
+            updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+
+            // Store interval for cleanup
+            window.countdownInterval = countdownInterval;
+
+        });
+
+        // Add loading screen
+        window.addEventListener('load', function () {
+            // Hide loading screen if exists
+            const loadingScreen = document.querySelector('.loading-screen');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }
+
+            // Add entrance animation to main content
+            const invitationCard = document.querySelector('.invitation-card');
+            if (invitationCard) {
+                invitationCard.style.animation = 'slideUp 1.5s cubic-bezier(0.23, 1, 0.32, 1)';
+            }
+        });
+
+        // Add error handling
+        window.addEventListener('error', function (e) {
+        });
+
+        // Add beforeunload event for cleanup
+        window.addEventListener('beforeunload', function () {
+            // Clean up any intervals or event listeners if needed
+            if (window.countdownInterval) {
+                clearInterval(window.countdownInterval);
+            }
+        });
+
+        // Manual countdown test function (for debugging)
+        function testCountdown() {
+            const now = new Date();
+            const wedding = new Date('2025-10-12T06:00:00');
+            const distance = wedding.getTime() - now.getTime();
+
+
+            // Force update countdown
+            updateCountdown();
+        }
+
+        // Make test function available globally
+        window.testCountdown = testCountdown;
+    </script>
+</body>
+
+</html>
